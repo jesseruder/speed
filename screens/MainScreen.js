@@ -36,7 +36,7 @@ export default class HomeScreen extends React.Component {
   }
 
   componentDidMount() {
-    this._checkPedometerAsync();
+    //this._checkPedometerAsync();
   }
 
   _checkPedometerAsync = async () => {
@@ -139,8 +139,7 @@ export default class HomeScreen extends React.Component {
         <Image source={require('../assets/images/pavement-texture.jpg')} style={styles.backgroundImage} />
         <View style={styles.insideContainer}>
           <Image source={require('../assets/images/logo.png')} style={styles.logo} />
-          <Text style={styles.text}>Start moving to hear the music {this.state.ratio}</Text>
-          <Text style={styles.text}>current rate {this.state.currentRate}</Text>
+          <Text style={styles.text}>Start moving to hear the music</Text>
           <TouchableOpacity onPress={() => this.props.navigation.navigate('Settings')} style={styles.settingsContainer}>
             <Image source={require('../assets/images/settings.png')} style={styles.settings} />
           </TouchableOpacity>
@@ -153,6 +152,7 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#000',
   },
   insideContainer: {
     flex: 1,
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     marginTop: 60,
-    marginBottom: 60,
+    marginBottom: 80,
   },
   settingsContainer: {
     position: 'absolute',
@@ -183,6 +183,6 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: 'rationale',
     color: '#ccc',
-    fontSize: 25,
+    fontSize: 30,
   },
 });
