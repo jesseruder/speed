@@ -18,11 +18,12 @@ export default class AppContainer extends React.Component {
   async _loadAssetsAsync() {
     try {
       await cacheAssetsAsync({
-        images: [require('./assets/images/expo-wordmark.png')],
+        images: [require('./assets/images/pavement-texture.jpg'), require('./assets/images/logo.png'), require('./assets/images/settings.png')],
         fonts: [
           FontAwesome.font,
-          { 'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf') },
+          { 'rationale': require('./assets/fonts/Rationale-Regular.ttf') },
         ],
+        music: [require('./assets/music/eyeoftiger.mp3')],
       });
     } catch (e) {
       console.warn(
@@ -58,6 +59,6 @@ const styles = StyleSheet.create({
   },
   statusBarUnderlay: {
     height: 24,
-    backgroundColor: 'rgba(0,0,0,0.2)',
+    backgroundColor: 'rgba(0,0,0,0.0)',
   },
 });
