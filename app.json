@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "speed",
-    "description": "No description",
+    "name": "Speed",
+    "description": "Don't slow down!",
     "slug": "speed",
     "privacy": "public",
     "sdkVersion": "18.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
-    "primaryColor": "#cccccc",
-    "icon": "./assets/icons/app-icon.png",
+    "primaryColor": "#000000",
+    "icon": "./assets/images/logo.png",
     "loading": {
       "backgroundColor": "#000000",
       "icon": "./assets/images/logo.png",

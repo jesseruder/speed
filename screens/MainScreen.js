@@ -108,6 +108,10 @@ export default class MainScreen extends React.Component {
   _onStepAsync = async (event) => {
     let steps = event.steps;
     let diffSteps = steps - this.state.lastSteps;
+    if (diffSteps === 0) {
+      return;
+    }
+
     let diffTime = Date.now() - this.state.lastTimeUpdated;
     let ratio = 1000 * diffSteps / diffTime;
 
@@ -257,7 +261,7 @@ const styles = StyleSheet.create({
     marginBottom: 100,
     fontFamily: 'rationale',
     color: '#ccc',
-    fontSize: 35,
+    fontSize: 30,
     paddingLeft: 20,
     paddingRight: 20,
   },
